@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>USD to PKR converter</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <!-- CSS file link -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="converter">
+    <h1>US dollar to Pakistani rupee</h1>
+    <p class="sub">Enter an amount in dollars to see it in rupees.</p>
+
+    <!-- JS hooks: #amount, #output, #rate, #refresh, #status, .chip[data-amount] -->
+    <div class="field">
+      <label for="amount">You send</label>
+      <div class="row">
+        <span class="code">USD</span>
+        <input type="number" id="amount" value="100" min="0" step="any" inputmode="decimal">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="output">They receive</label>
+      <div class="row">
+        <span class="code">PKR</span>
+        <input type="number" id="output" readonly tabindex="-1" placeholder="0.00">
+      </div>
+    </div>
+
+    <div class="chips" aria-label="Quick amounts">
+      <button class="chip" type="button" data-amount="10">$10</button>
+      <button class="chip" type="button" data-amount="50">$50</button>
+      <button class="chip" type="button" data-amount="100">$100</button>
+      <button class="chip" type="button" data-amount="500">$500</button>
+      <button class="chip" type="button" data-amount="1000">$1,000</button>
+    </div>
+
+    <div class="rate">
+      <span class="rate-label">1 USD =
+        <input type="number" id="rate" class="rate-input" value="280" step="any" aria-label="Exchange rate, PKR per USD"> PKR
+      </span>
+      <button type="button" id="refresh">Update rate</button>
+    </div>
+
+    <p class="status" id="status" role="status" aria-live="polite">Rate is set by hand. Update it to get the latest.</p>
+  </main>
+
+  <!-- JS file link: apni script.js isi folder mein banao -->
+  <script src="script.js"></script>
+</body>
+</html>
