@@ -166,3 +166,20 @@ input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
   h1 { font-size: 1.7rem; }
   input[type="number"] { font-size: 2rem; }
 }
+select.code {
+  font: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 4px 6px;
+  cursor: pointer;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+select.code:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

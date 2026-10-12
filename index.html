@@ -22,15 +22,25 @@
     <div class="field">
       <label for="amount">You send</label>
       <div class="row">
-        <span class="code">USD</span>
-        <input type="number" id="amount" value="100" min="0" step="any" inputmode="decimal">
+        <select id="from" class="code" aria-label="From currency">
+  <option value="USD" selected>USD</option>
+  <option value="EUR">EUR</option>
+  <option value="AUD">AUD</option>
+  <option value="PKR">PKR</option>
+</select>
+        <input type="number" id="amount" value="0" min="0" step="any" inputmode="decimal">
       </div>
     </div>
 
     <div class="field">
       <label for="output">They receive</label>
       <div class="row">
-        <span class="code">PKR</span>
+        <select id="to" class="code" aria-label="To currency">
+  <option value="USD">USD</option>
+  <option value="EUR">EUR</option>
+  <option value="AUD">AUD</option>
+  <option value="PKR" selected>PKR</option>
+</select>
         <input type="number" id="output" readonly tabindex="-1" placeholder="0.00">
       </div>
     </div>
